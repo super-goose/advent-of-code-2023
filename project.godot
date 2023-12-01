@@ -11,9 +11,16 @@ config_version=5
 [application]
 
 config/name="advent-of-code-2023"
+run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=648
+window/size/viewport_height=1152
 
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.196078, 0.337255, 0.254902, 1)

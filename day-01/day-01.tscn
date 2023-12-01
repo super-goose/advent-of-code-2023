@@ -1,0 +1,92 @@
+[gd_scene load_steps=5 format=3 uid="uid://cp6d1l0osyx6a"]
+
+[ext_resource type="Script" path="res://day-01/day-01.gd" id="1_w6me8"]
+[ext_resource type="Theme" uid="uid://c5xk3l42ey6l1" path="res://day-01/resources/theme.tres" id="2_mik81"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a7abc"]
+font_size = 24
+font_color = Color(0.619608, 0.717647, 0.843137, 1)
+
+[sub_resource type="Theme" id="Theme_ma5sa"]
+default_font_size = 40
+
+[node name="day-01" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w6me8")
+input_file = "res://day-01/input.txt"
+
+[node name="Input" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 202.0
+offset_right = 624.0
+offset_bottom = 1128.0
+theme = ExtResource("2_mik81")
+text = "threehqv2
+sxoneightoneckk9ldctxxnffqnzmjqvj
+1hggcqcstgpmg26lzxtltcgg
+nrhoneightkmrjkd7fivesixklvvfnmhsldrc
+zhlzhrkljonephkgdzsnlglmxvprlh6n
+594chhplnzsxktjmkfpninefiveczfnvsctbxcfzfzjh
+seven2tjf
+five712
+tzheightzlzmsqlnxfqzrlbhbdpbnbdjns6
+ztwo1eight95
+one25eightzptqnvvlnf
+46brthree51bhvhtcnpcffoursix
+five7bhsfdktxq33qtrmvqxfgone3
+4f6six1skrmltxeight
+onemhfbhrx99
+five3eightjkdpxqtmbtwo
+onebzp4seven4ft
+5sxgjszzninembrtjptlfn24llbxrnm
+sixninefivejpqgkcx3sixnine15
+fourcmsndtdkrone75
+68hnrkxbmvjzjzfk
+2oneseventhreesixrbkkbhlx
+five6npfmggbdkljqsixjnxgk1cqdmcneight
+6eightfiveksmrbjgc
+eight8zqjsixfivefrrbg4
+2sixfhbnqbjv3krgqgfj
+one56vhgnlxfjhrc6
+8twothreelgbmx31
+kfkjfckbhnv8threedpxhhfivepkcnfjmcpt
+onenxqtvzvzph8nmtjgsjkone4btzxpkjfbthhsmqcqz"
+
+[node name="Working" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 101.0
+offset_right = 649.0
+offset_bottom = 171.0
+theme = ExtResource("2_mik81")
+text = "594chhplnzsxktjmkfpninefiveczfnvsctbxcfzfzjh"
+label_settings = SubResource("LabelSettings_a7abc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Total" type="Label" parent="."]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 22.0
+offset_right = 628.0
+offset_bottom = 84.0
+theme = SubResource("Theme_ma5sa")
+text = "0"
+horizontal_alignment = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 19.0
+offset_right = 160.0
+offset_bottom = 85.0
+theme = ExtResource("2_mik81")
+text = "GO"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
