@@ -1,7 +1,7 @@
 extends Control
 
-const SHORT_DELAY = .01
-const LONG_DELAY = .02
+const SHORT_DELAY = .3
+const LONG_DELAY = .6
 const NUMBERS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 const WORDS = [
 	'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', #'zero'
@@ -21,7 +21,7 @@ func _ready():
 
 func do_the_thing():
 	while len($Input.text):
-		await process_line_1() # <<<<<<<<<
+		await process_line_2() # <<<<<<<<<
 		$Total.text = str(total)
 		await get_tree().create_timer(LONG_DELAY).timeout
 	print('total: %s' % total)
@@ -38,11 +38,11 @@ func process_line_1():
 		if working_text[0] not in NUMBERS:
 			working_text = working_text.substr(1, len(working_text) - 1)
 			$Working.text = working_text
-#			await get_tree().create_timer(SHORT_DELAY).timeout
+			await get_tree().create_timer(SHORT_DELAY).timeout
 		if working_text[len(working_text) - 1] not in NUMBERS:
 			working_text = working_text.substr(0, len(working_text) - 1)
 			$Working.text = working_text
-#			await get_tree().create_timer(SHORT_DELAY).timeout
+			await get_tree().create_timer(SHORT_DELAY).timeout
 
 	var current_number = "%s%s" % [working_text[0], working_text[len(working_text) - 1]]
 	await get_tree().create_timer(SHORT_DELAY).timeout
@@ -60,15 +60,15 @@ func process_line_2():
 	while working_text[0] not in NUMBERS or working_text[len(working_text) - 1] not in NUMBERS:
 		working_text = massage_working_text(working_text)
 		$Working.text = working_text
-#		await get_tree().create_timer(SHORT_DELAY).timeout
+		await get_tree().create_timer(SHORT_DELAY).timeout
 		if working_text[0] not in NUMBERS:
 			working_text = working_text.substr(1, len(working_text) - 1)
 			$Working.text = working_text
-#			await get_tree().create_timer(SHORT_DELAY).timeout
+			await get_tree().create_timer(SHORT_DELAY).timeout
 		if working_text[len(working_text) - 1] not in NUMBERS:
 			working_text = working_text.substr(0, len(working_text) - 1)
 			$Working.text = working_text
-#			await get_tree().create_timer(SHORT_DELAY).timeout
+			await get_tree().create_timer(SHORT_DELAY).timeout
 
 	var current_number = "%s%s" % [working_text[0], working_text[len(working_text) - 1]]
 	await get_tree().create_timer(SHORT_DELAY).timeout
