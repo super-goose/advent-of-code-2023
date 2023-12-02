@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://blxd8k2rwo3xy"]
+
+[ext_resource type="PackedScene" uid="uid://cp6d1l0osyx6a" path="res://day-01/day-01.tscn" id="1_e43pr"]
+[ext_resource type="Script" path="res://day-02/day-02.gd" id="1_fnj0v"]
+
+[node name="day-02" instance=ExtResource("1_e43pr")]
+script = ExtResource("1_fnj0v")
+input_file = "res://day-02/input.txt"
