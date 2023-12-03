@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6v42ctyy3rde"]
+
+[ext_resource type="Script" path="res://day-03/number.gd" id="1_m6lyy"]
+
+[node name="number" type="Area2D"]
+collision_mask = 0
+script = ExtResource("1_m6lyy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
