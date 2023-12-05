@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bddat1tl5u2jc"]
+
+[ext_resource type="Script" path="res://day-05/day-05.gd" id="1_dm81a"]
+
+[node name="day-05" type="Node2D"]
+script = ExtResource("1_dm81a")
+input_file = "res://day-05/input_altered.txt"

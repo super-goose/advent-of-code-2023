@@ -21,9 +21,8 @@ C_="*res://common.gd"
 
 [display]
 
-window/size/viewport_width=1296
-window/size/viewport_height=2304
-window/stretch/scale=2.0
+window/size/viewport_width=658
+window/size/viewport_height=1152
 
 [rendering]
 
