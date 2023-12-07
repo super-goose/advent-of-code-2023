@@ -4,4 +4,4 @@
 
 [node name="day-05" type="Node2D"]
 script = ExtResource("1_dm81a")
-input_file = "res://day-05/input_altered.txt"
+input_file = "res://day-05/input.txt"

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4dokgjp7yd0b"]
+
+[ext_resource type="Script" path="res://day-06/day-06.gd" id="1_m8g6k"]
+
+[node name="day-06" type="Node2D"]
+script = ExtResource("1_m8g6k")
+input_file = "res://day-06/input.txt"
